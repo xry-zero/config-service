@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: config-service
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/xry-zero/config.git #配置文件所在仓库
+          username: xry-zero
+          password: 1xiaorenyi.
+          default-label: master #配置文件分支
+          search-paths: config  #配置文件所在根目录
+
+eureka:
+  client:
+    serviceUrl:
+      register-with-eureka: true
+      fetch-registry: true
+  instance:
+    preferIpAddress: true
+
+server:
+  port: 8056
